@@ -1,3 +1,9 @@
+# revision 21947
+# category Package
+# catalog-ctan /biblio/bibtex/utils/bibexport
+# catalog-date 2009-11-28 12:49:10 +0100
+# catalog-license lppl1.3
+# catalog-version 2.20
 Name:		texlive-bibexport
 Version:	2.20
 Release:	1
@@ -49,6 +55,7 @@ in ones like month names) and following the cross-references.
 #- source
 %doc %{_texmfdistdir}/source/bibtex/bibexport/bibexport.dtx
 %doc %{_texmfdistdir}/source/bibtex/bibexport/bibexport.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -63,3 +70,5 @@ pushd %{buildroot}%{_bindir}
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
