@@ -1,11 +1,11 @@
-# revision 21947
+# revision 24749
 # category Package
 # catalog-ctan /biblio/bibtex/utils/bibexport
-# catalog-date 2009-11-28 12:49:10 +0100
+# catalog-date 2011-12-03 09:04:10 +0100
 # catalog-license lppl1.3
-# catalog-version 2.20
+# catalog-version 3.01
 Name:		texlive-bibexport
-Version:	2.20
+Version:	3.01
 Release:	1
 Summary:	Extract a BibTeX file based on a .aux file
 Group:		Publishing
@@ -19,9 +19,6 @@ BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 Provides:	texlive-bibexport.bin = %{EVRD}
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
-Conflicts:	texlive-source <= 20110705-3
 
 %description
 A Bourne shell script that uses BibTeX to extract bibliography
@@ -30,24 +27,25 @@ BibTeX file, expanding the abbreviations (other than the built-
 in ones like month names) and following the cross-references.
 
 %pre
-    %_texmf_mktexlsr_pre
+    %{_sbindir}/texlive.post
 
 %post
-    %_texmf_mktexlsr_post
+    %{_sbindir}/texlive.post
 
 %preun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
+	%{_sbindir}/texlive.post
     fi
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
 %files
 %{_bindir}/bibexport
+%{_texmfdistdir}/bibtex/bst/bibexport/expcites.bst
 %{_texmfdistdir}/bibtex/bst/bibexport/expkeys.bst
 %{_texmfdistdir}/bibtex/bst/bibexport/export.bst
 %{_texmfdistdir}/scripts/bibexport/bibexport.sh
