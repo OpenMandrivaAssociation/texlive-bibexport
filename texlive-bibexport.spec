@@ -26,16 +26,8 @@ entries that are \cite'd in a document. It can also expand a
 BibTeX file, expanding the abbreviations (other than the built-
 in ones like month names) and following the cross-references.
 
-%pre
-    %{_sbindir}/texlive.post
-
 %post
     %{_sbindir}/texlive.post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-    fi
 
 %postun
     if [ $1 -eq 0 ]; then
@@ -54,7 +46,6 @@ in ones like month names) and following the cross-references.
 #- source
 %doc %{_texmfdistdir}/source/bibtex/bibexport/bibexport.dtx
 %doc %{_texmfdistdir}/source/bibtex/bibexport/bibexport.ins
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -69,5 +60,3 @@ pushd %{buildroot}%{_bindir}
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
