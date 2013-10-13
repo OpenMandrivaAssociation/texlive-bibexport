@@ -1,4 +1,4 @@
-# revision 26313
+# revision 29349
 # category Package
 # catalog-ctan /biblio/bibtex/utils/bibexport
 # catalog-date 2011-12-03 09:04:10 +0100
@@ -6,7 +6,7 @@
 # catalog-version 3.01
 Name:		texlive-bibexport
 Version:	3.01
-Release:	3
+Release:	4
 Summary:	Extract a BibTeX file based on a .aux file
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/biblio/bibtex/utils/bibexport
@@ -60,26 +60,3 @@ pushd %{buildroot}%{_bindir}
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
-
-
-%changelog
-* Tue Aug 07 2012 Paulo Andrade <pcpa@mandriva.com.br> 3.01-3
-+ Revision: 811972
-- Update to latest release.
-
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 3.01-2
-+ Revision: 749603
-- Rebuild to reduce used resources
-
-* Fri Dec 09 2011 Paulo Andrade <pcpa@mandriva.com.br> 3.01-1
-+ Revision: 739690
-- texlive-bibexport
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 2.20-1
-+ Revision: 717917
-- texlive-bibexport
-- texlive-bibexport
-- texlive-bibexport
-- texlive-bibexport
-- texlive-bibexport
-
