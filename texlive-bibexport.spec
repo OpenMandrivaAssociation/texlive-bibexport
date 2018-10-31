@@ -6,7 +6,7 @@
 # catalog-version 3.01
 Name:		texlive-bibexport
 Version:	3.02
-Release:	1
+Release:	2
 Summary:	Extract a BibTeX file based on a .aux file
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/biblio/bibtex/utils/bibexport
