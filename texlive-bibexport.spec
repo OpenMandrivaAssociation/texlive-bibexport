@@ -1,6 +1,6 @@
 Name:		texlive-bibexport
 Version:	50677
-Release:	1
+Release:	2
 Summary:	Extract a BibTeX file based on a .aux file
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/biblio/bibtex/utils/bibexport
