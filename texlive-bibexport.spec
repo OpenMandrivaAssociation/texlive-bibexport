@@ -3,7 +3,7 @@ Version:	50677
 Release:	2
 Summary:	Extract a BibTeX file based on a .aux file
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/biblio/bibtex/utils/bibexport
+URL:		https://www.ctan.org/tex-archive/biblio/bibtex/utils/bibexport
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bibexport.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bibexport.doc.r%{version}.tar.xz
