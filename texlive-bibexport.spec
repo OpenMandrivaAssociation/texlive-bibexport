@@ -1,5 +1,6 @@
 %global tl_name bibexport
 %global tl_revision 50677
+%global tl_bin_links bibexport:%{_texmfdistdir}/scripts/bibexport/bibexport.sh
 
 Name:		texlive-%{tl_name}
 Epoch:		1
@@ -16,6 +17,8 @@ BuildArch:	noarch
 BuildSystem:	texlive
 Requires:	texlive(bibexport.bin)
 Provides:	texlive(%{tl_name}) = %{tl_revision}
+Provides:	texlive(%{tl_name}.bin) = %{tl_revision}
+Provides:	texlive-%{tl_name}.bin = %{EVRD}
 
 %description
 A Bourne shell script that uses BibTeX to extract bibliography entries
